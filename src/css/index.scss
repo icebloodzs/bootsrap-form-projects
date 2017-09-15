@@ -1,0 +1,112 @@
+@import "./public/reset.scss";
+@import "./public/Style.scss";
+
+.clear{
+  clear: both;
+}
+
+.txxx{
+    margin: 0 auto;
+    width: rem(368);
+    height: rem(638);
+    background-color: #e6e6e6;
+    .schb{
+      @include font_small_head();
+      width: rem(368);
+      height: rem(48);
+      text-align: center;
+      font-size: rem(18);
+      font-weight: 600;
+      line-height: rem(48);
+      background-color: #f8f8f8;
+    }
+    .messages{
+      padding-top: rem(27);
+      border-top: rem(1) solid #bbbbbb;
+     
+      .message1{
+        width: rem(368);
+        display: flex;
+        justify-content: center;
+        font-size: rem(16);
+        line-height: rem(30);
+        margin-bottom: rem(15);
+        .message_con{
+          width: rem(100);
+          text-align: center;
+          padding-top: rem(3); 
+        }
+        .input{
+          color: #a3a3a3;
+          width:rem(248);
+          height:rem(28);
+          font-weight: 400;
+          text-indent: rem(5);
+        }
+      }
+      .message2{
+        width: rem(368);
+        display: flex;
+        justify-content: center;
+        font-size: rem(16);
+        line-height: rem(30);
+        margin-bottom: rem(15);
+        .message2_con{
+          width: rem(100);
+          text-align: center;
+          padding-top: rem(3); 
+        }
+        .input{
+          color: #a3a3a3;
+          width:rem(248);
+          height:rem(28);
+          font-weight: 400;
+          text-indent: rem(5);
+        }
+      }
+      .message3{
+        width: rem(368);
+        display: flex;
+        justify-content: center;
+        font-size: rem(16);
+        line-height: rem(30);
+        margin-bottom: rem(15);
+        .message3_con {
+          position: relative;
+          width: rem(100);
+          height:rem(28);
+          .message3_cont{
+            position: absolute;
+            line-height: rem(16);
+            width: rem(36);
+            height: rem(16);
+            padding-left: rem(50);
+            padding-top: rem(4);
+          }
+        
+        }
+        .input{ 
+          color: #a3a3a3;
+          width:rem(248);
+          height:rem(28);
+          font-weight: 400;
+          text-indent: rem(5);
+        }
+      }
+      .rightnow{
+        display: block;
+        text-decoration: none;
+        width: rem(340);
+        height: rem(40);
+        background-color: #fff;
+        border: rem(1) solid #bbbbbb;
+        border-radius: rem(5);
+        color: #525e71;
+        font-size: rem(16);
+        text-align: center;
+        line-height: rem(38);
+        margin-left: rem(20);
+        margin-top: rem(90) ;
+      }
+    }
+}

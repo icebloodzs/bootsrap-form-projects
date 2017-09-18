@@ -5,7 +5,7 @@
   clear: both;
 }
 
-.txxx{
+.generatePosters{
     margin: 0 auto;
     width: rem(368);
     height: rem(638);
@@ -107,6 +107,8 @@
         line-height: rem(38);
         margin-left: rem(20);
         margin-top: rem(90) ;
+        cursor: pointer;
+        outline: none;
       }
     }
 }

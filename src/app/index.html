@@ -1,25 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 	@@include('header.inc')
+	<title></title>
+	<!-- <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"> -->
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/bootstrapValidator.css"/>
 	<link rel="stylesheet" href="../css/index.css">
+    <!--[if lt IE 9]>
+      <script src="../lib/html5shiv/html5.min.js"></script>
+      <script src="../lib/respond//respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<div class="generatePosters">
-		<div class="titletext">生成海报-信息填写</div>
-		<form name="myPosters" action="demo.jsp" method="post" class="messages">
-			<div class="bankOutlets">
-				<div class="bankOutlets_con">银行网点</div><input type="text" class="input" name="yhwd" placeholder="请准确输入银行网点信息"/>
+	<header>
+		<div class="container-fluid headtitle">
+		<h3><p class="text-center">生成海报 - 信息填写</p></h3></head>
+		</div>
+	</header>
+	<section>
+		<div class="container forminput">
+			<form class="form-horizontal" id="myform">
+					<div class="form-group">
+						<label for="bankOutlets" class="col-sm-2 control-label"><h4>银行网点</h4></label>
+						<div class="col-sm-10">
+								<select class="form-control" name="select" id="bankOutlets">
+										<option value="">请选择一个网点</option>
+										<option value="1">1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+								</select>
+						</div>
+					</div>
+					<div class="form-group">
+							<label for="saleId" class="col-sm-2 control-label"><h4>业务员姓名</h4></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="saleId" placeholder="请准确输入业务员姓名" name="salename">
+							</div>
+					</div>
+					<div class="form-group">
+						<label for="saleNum" class="col-sm-2 control-label"><h4>工号</h4></label>
+						<div class="col-sm-10">
+							<input type="number" class="form-control" id="saleNum" placeholder="请准确输入业务员工号"  name="salenum">
+						</div>
+					</div>
+					<div class="form-group right-now">	  
+						<button type="button" name="submit" class="btn btn-primary btn-lg btn-block"  data-target="#myModal">立即生成</button>
+					</div>
+			</form>
+		</div>
+		
+	</section>
+	<!-- Modal -->
+	<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">系统提示</h4>
+				</div>
+				<div class="modal-body">
+					确定立即生成吗
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" id="sure">确定</button>
+				</div>
 			</div>
-			<div class="salesmanName">
-				<div class="salesmanName_con">业务员姓名</div><input type="text" class="input" name="name" placeholder="请准确输入业务员姓名">
-			</div>
-			<div class="jobNumber">
-				<div class="jobNumber_con"><div class="jobNumber_cont">工号</div></div><input type="text" name="number" class="input" placeholder="请准确输入业务员工号">
-			</div>
-			<input name="btnId" type="submit" value="立即生成" class="rightnow">
-		</form>
+		</div>
 	</div>
-	<link rel="stylesheet" href="../js/index.js">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrapValidator.min.js"></script>
+	<script src="../js/index.js"></script>
 </body>
 </html>

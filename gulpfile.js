@@ -39,7 +39,7 @@ gulp.task('copy:img', function (done) {
 
 //压缩合并css, css中既有自己写的.scss, 也有引入第三方库的.css
 gulp.task('scssmin', function (done) {
-    gulp.src(['src/css/*.scss', 'src/css/*.css'])
+    gulp.src(['src/css/*.scss', 'src/css/*.css','src/lib/bootstrapvalidator/css/*.css'])
         .pipe(scss().on('error', scss.logError))
         //这里可以加css sprite 让每一个css合并为一个雪碧图
         //.pipe(spriter({}))
